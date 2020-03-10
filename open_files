@@ -1,0 +1,42 @@
+'''
+Open files: python can open, close, read, write and append files
+
+'''
+f=open('catherine_letter_english_patient.txt','w')
+print(type(f))
+f.write('My darling, I\'m waiting for you — how long is a day in the dark\n')
+
+f.close()
+
+f=open('catherine_letter_english_patient.txt','r')
+print(type(f))
+print(f.read())
+f.close
+
+f=open('catherine_letter_english_patient.txt','r')
+print(f.readline())
+f.close
+
+f=open('catherine_letter_english_patient.txt','r')
+print(f.readlines())
+f.close
+
+f=open('catherine_letter_english_patient.txt','a')
+f.write('The fire is gone now, and I\'m horribly cold.\
+I really ought to drag myself outside but then there would be the sun. . . I\'m\
+afraid I waste the light on the paintings and on writing these words.\
+We die, we die rich with lovers and tribes, tastes we have swallowed,\
+bodies we have entered and swum up like rivers, fears we have hidden in,\
+like this wretched cave. We are the real countries, not the boundaries drawn\
+on maps with the names of powerful men. I know you will come and carry me out\
+into the palace of winds. That\'s all I\'ve wanted — to walk in such a place with\
+you, with friends, on earth without maps...')
+f.close()
+
+f=open('catherine_letter_english_patient.txt','r')
+print(f.read())
+f.close
+
+with open('catherine_letter_english_patient.txt','r') as f:
+    for line in f.readlines():
+        print(line,end='')
